@@ -3,51 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bichos025</title>
+    <title>Datos de Transferencia Bancaria</title>
     <style>
-        /* Estilos generales */
+        /* Fondo con la nueva imagen */
         body {
-            background-image: url('bichos025s.png'); /* Asegúrate de subir esta imagen */
+            background: url('bichos025s.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: #D3D3D3; /* Texto en gris claro */
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        /* Contenedor con fondo oscuro para resaltar el contenido */
-        .container {
-            width: 90%;
-            max-width: 800px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            background-color: black;
+            color: #D3D3D3;
+            font-family: Arial, sans-serif;
             text-align: center;
+            padding: 20px;
         }
 
-        /* Efecto neón en el texto */
-        h1, h2, h3, p {
-            color: #D3D3D3; /* Gris claro */
-            text-shadow: 0 0 10px #BEBEBE, 0 0 20px #BEBEBE, 0 0 30px #BEBEBE;
+        /* Títulos con efecto neón */
+        h2 {
+            font-size: 36px;
+            text-shadow: 0 0 10px #BEBEBE, 0 0 20px #BEBEBE;
+            margin-bottom: 30px;
+        }
+
+        /* Contenedor de cada dato */
+        .dato {
+            margin-bottom: 20px;
+        }
+
+        .dato p {
+            color: #D3D3D3;
+            text-shadow: 0 0 5px #BEBEBE, 0 0 10px #BEBEBE;
+            font-size: 18px;
         }
 
         /* Botones con efecto neón */
         button {
-            background: transparent;
-            border: 2px solid #D3D3D3;
-            color: #D3D3D3;
             padding: 10px 20px;
-            font-size: 16px;
+            color: #D3D3D3;
+            background-color: rgba(50, 50, 50, 0.5);
+            border: 2px solid #D3D3D3;
             cursor: pointer;
+            font-size: 16px;
             text-shadow: 0 0 5px #BEBEBE;
             transition: 0.3s;
         }
@@ -55,17 +49,59 @@
         button:hover {
             background: #D3D3D3;
             color: black;
-            box-shadow: 0 0 10px #D3D3D3, 0 0 20px #D3D3D3, 0 0 30px #D3D3D3;
+            box-shadow: 0 0 10px #D3D3D3, 0 0 20px #D3D3D3;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Bienvenido a Bichos025</h1>
-        <p>Explora la magia de la noche con nuestro diseño único.</p>
-        <button onclick="alert('¡Has hecho clic!')">Haz clic aquí</button>
-    </div>
+<h2>Datos de Transferencia Bancaria</h2>
+
+<div class="dato">
+    <p>Alias Nº de Teléfono: +595992264677</p>
+    <button onclick="copiarTexto('+595992264677')">Copiar Alias Nº de Teléfono</button>
+</div>
+
+<div class="dato">
+    <p>Titular: ALFREDO RIVAS</p>
+    <button onclick="copiarTexto('ALFREDO RIVAS')">Copiar Titular</button>
+</div>
+
+<div class="dato">
+    <p>Banco: Familiar</p>
+    <button onclick="copiarTexto('Familiar')">Copiar Banco</button>
+</div>
+
+<div class="dato">
+    <p>Nº de Teléfono: +595992264677</p>
+    <button onclick="copiarTexto('+595992264677')">Copiar Nº de Teléfono</button>
+</div>
+
+<div class="dato">
+    <p>Nº de Cédula: 2026691</p>
+    <button onclick="copiarTexto('2026691')">Copiar Nº de Cédula</button>
+</div>
+
+<div class="dato">
+    <p>Nº de cuenta para transferencias desde Banco Familiar: 81-7775866</p>
+    <button onclick="copiarTexto('81-7775866')">Copiar Nº de Cuenta Banco Familiar</button>
+</div>
+
+<div class="dato">
+    <p>Nº de cuenta para transferencias desde otros bancos: 817775866</p>
+    <button onclick="copiarTexto('817775866')">Copiar Nº de Cuenta Otros Bancos</button>
+</div>
+
+<script>
+    function copiarTexto(texto) {
+        navigator.clipboard.writeText(texto).then(() => {
+            alert("Datos copiados al portapapeles");
+        }).catch(err => {
+            console.error("Error al copiar los datos: ", err);
+        });
+    }
+</script>
 
 </body>
 </html>
+
