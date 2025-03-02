@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bichos025</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background-image: url('bichos025s.png'); /* Asegúrate de subir esta imagen */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #D3D3D3; /* Texto en gris claro */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Contenedor con fondo oscuro para resaltar el contenido */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        /* Efecto neón en el texto */
+        h1, h2, h3, p {
+            color: #D3D3D3; /* Gris claro */
+            text-shadow: 0 0 10px #BEBEBE, 0 0 20px #BEBEBE, 0 0 30px #BEBEBE;
+        }
+
+        /* Botones con efecto neón */
+        button {
+            background: transparent;
+            border: 2px solid #D3D3D3;
+            color: #D3D3D3;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-shadow: 0 0 5px #BEBEBE;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #D3D3D3;
+            color: black;
+            box-shadow: 0 0 10px #D3D3D3, 0 0 20px #D3D3D3, 0 0 30px #D3D3D3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bienvenido a Bichos025</h1>
+        <p>Explora la magia de la noche con nuestro diseño único.</p>
+        <button onclick="alert('¡Has hecho clic!')">Haz clic aquí</button>
+    </div>
+
+</body>
+</html>
